@@ -197,6 +197,7 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Locati
         miUbicacion.setPosition(pos);
 
 
+
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos, 19));
 
 
