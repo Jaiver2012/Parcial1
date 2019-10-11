@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/logo"
+            android:src="@drawable/calculator"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operación"
+            android:id="@+id/txt_operation"
+            android:textSize="43dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Escribe la respuesta"
+            android:id="@+id/answer"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responder"
+            android:id="@+id/btn_answer"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:enabled="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Por favor salga de la zona reactiva o diríjase a otra zona"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorAccent"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:id="@+id/information"
+            android:visibility="invisible"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

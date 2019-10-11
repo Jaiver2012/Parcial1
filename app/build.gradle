@@ -28,4 +28,8 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5+'
+
+    //add library
+    implementation 'com.ebanx:swipe-button:0.4.0'
+
 }

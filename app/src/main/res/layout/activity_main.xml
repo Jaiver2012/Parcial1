@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradiente"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/grad"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -28,23 +28,74 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:id="@+id/et_name"
+            android:hint="Escribe tú nombre"
+            android:textAlignment="center"
             android:padding="15dp"
             android:textColorHint="#ccc"
             android:textColor="#fff"
-            android:editable="false"/>
+            android:editable="true"/>
 
-        <Button
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/checkSex"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/btn_men"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/btn_women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Femenino" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el nivel"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18dp"
+            />
+        <Spinner
+            android:id="@+id/sp_level"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:textColor="#0A0A0A"
-            android:background="@drawable/log"
-            android:text="Ir a mapa"
-            android:id="@+id/btn_map"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            android:paddingTop="10dp"
+            android:paddingBottom="40dp"
             />
+
+        <com.ebanx.swipebtn.SwipeButton
+            android:id="@+id/swipe_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+             app:inner_text="Jugar"
+            app:inner_text_size="18sp"
+            app:inner_text_top_padding="20dp"
+            app:inner_text_bottom_padding="20dp"
+            app:button_image_disabled="@drawable/ic_play"
+            app:button_image_enabled="@drawable/ic_play"
+            app:button_top_padding="20dp"
+            app:button_bottom_padding="20dp"
+            app:button_left_padding="20dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+
+            />
+
 
 
         <TextView
@@ -82,9 +133,6 @@
                 android:layout_weight="1"
 
                 />
-
-
-
 
 
         </LinearLayout>
