@@ -202,12 +202,14 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Locati
 
         if(PolyUtil.containsLocation(miUbicacion.getPosition(),biblioteca.getPoints(),true)){
             grocery.setVisibility(View.VISIBLE);
+            Toast.makeText(getApplicationContext(),"Estas en la biblioteca puedes canjear",Toast.LENGTH_LONG).show();
         }else{
             grocery.setVisibility(View.INVISIBLE);
         }
 
         if((PolyUtil.containsLocation(miUbicacion.getPosition(),central.getPoints(),true))|| (PolyUtil.containsLocation(miUbicacion.getPosition(),wonka.getPoints(),true))){
             question.setVisibility(View.VISIBLE);
+            Toast.makeText(getApplicationContext(),"Estas en una zona reactiva",Toast.LENGTH_LONG).show();
         }else{
             question.setVisibility(View.INVISIBLE);
         }
